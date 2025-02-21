@@ -1,3 +1,9 @@
-// * {
-//     background-color: pink !important;
-// }
+* {
+    background-color: pink !important;
+}
+
+img {
+    max-width: 400px;
+    height: auto;
+    display: block; /* Prevents some potential spacing issues below the image */
+  }
