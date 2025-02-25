@@ -7,3 +7,7 @@ img {
     height: auto;
     display: block; /* Prevents some potential spacing issues below the image */
   }
+
+.lead {
+    max-width: 70ch;
+  }
