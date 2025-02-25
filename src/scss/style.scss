@@ -5,9 +5,10 @@
 img {
     max-width: 400px;
     height: auto;
-    display: block; /* Prevents some potential spacing issues below the image */
+    display: block;
   }
 
+// Limit text width for easy reading  
 .lead {
     max-width: 70ch;
   }
