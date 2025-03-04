@@ -1,0 +1,62 @@
+* {
+  background-color: pink !important;
+}
+
+img {
+  max-width: 400px;
+  height: auto;
+  display: block;
+}
+
+/* Limit text width for easy reading */
+.lead {
+  max-width: 75ch;
+}
+
+/* Optional: Add some subtle spacing or margin */
+.challenge-card {
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  /* Light border */
+  border-radius: 0.25rem;
+  /* Optional: Rounded corners */
+}
+
+.card-title-combined {
+  margin: 0;
+  /* Remove default margin */
+  font-size: 1.25rem;
+  /* Adjust font size as needed */
+  font-weight: 600;
+  /* Adjust font weight as needed */
+  color: #333;
+  /* Adjust text color as needed */
+}
+
+.card-header {
+  padding: 0.75rem 1.25rem;
+  /* ensure header padding is correct */
+}
+
+/* Responsive Grid Adjustments */
+
+/* Mobile (xs and sm) - 1 card per row */
+@media (max-width: 767.98px) {
+  .col-12, .col-sm-6, .col-md-4, .col-lg-3 {
+    width: 100%; /* Ensure full width */
+  }
+}
+
+/* Tablet (md) - 2 cards per row */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .col-12, .col-sm-6, .col-md-4, .col-lg-3 {
+    width: 50%; /* 2 cards per row */
+  }
+}
+
+/* Extra Large (xl) and above - 4 cards per row */
+@media (min-width: 1200px) {
+  .col-12, .col-sm-6, .col-md-4, .col-lg-3 {
+    width: 25%; /* 4 cards per row */
+  }
+}
