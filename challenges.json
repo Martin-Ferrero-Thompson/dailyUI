@@ -1,0 +1,24 @@
+{
+  "challenges": [
+    {
+      "id": "002",
+      "title": "Credit Card Checkout",
+      "description": "Design a credit card checkout form or page. Don't forget the important elements such as the numbers, dates, security numbers, etc.",
+      "image": "./assets/images/002-Credit-Card-Checkout.png",
+      "exampleLink": "https://collectui.com/challenges/checkout",
+      "solutionLink": "https://mydailyui.github.io/002-Credit-Card-Checkout/",
+      "completed": true,
+      "date": "2025-05-19"
+    },
+    {
+      "id": "001",
+      "title": "Sign Up",
+      "description": "Create an intuitive and welcoming sign-up experience.",
+      "image": "./assets/images/001-Sign-Up-Stargazer-Society.png",
+      "exampleLink": "https://collectui.com/challenges/sign-up",
+      "solutionLink": "https://dcm-mydailyui.github.io/001-Sign-Up-Stargazer-Society/",
+      "completed": true,
+      "date": "2025-05-17"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="./">
+    <title>My Daily UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="min-h-full transition-colors duration-200 dark:text-white
+    bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-slate-100 via-indigo-50/40 to-slate-100
+    dark:bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] dark:from-gray-900 dark:via-indigo-950/30 dark:to-gray-900
+    bg-[size:100%_100%] dark:bg-[size:100%_100%]
+    before:fixed before:inset-0 before:bg-[url('data:image/svg+xml,%3Csvg width=\" 20\" height=\"20\"
+    xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M0 0h20v20H0z\" fill=\"none\"/%3E%3Cpath d=\"M13 7h1v1h-1zM6
+    7h1v1H6zM6 13h1v1H6zM13 13h1v1h-1z\" fill=\"rgba(99,102,241,0.07)\"/%3E%3C/svg%3E')] before:-z-10 before:opacity-30
+    dark:before:opacity-20">
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <header class="mb-12">
+            <nav class="flex justify-between items-center">
+                <h1 class="text-3xl font-bold text-slate-800 dark:text-white">Martin Ferrero-Thompson</h1>
+                <div id="theme-toggle" class="relative z-50 flex items-center bg-slate-200/90 dark:bg-slate-700/90 rounded-xl p-1 w-36 h-10 shadow-lg hover:shadow-xl backdrop-blur-sm">
+                    <div class="absolute w-10 h-8 bg-white dark:bg-slate-600 rounded-lg shadow-md transition-transform duration-200" id="slider"></div>
+                    <button class="relative z-10 flex-1 h-8 flex items-center justify-center text-yellow-500" data-theme="light" aria-label="Light theme">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"/>
+                        </svg>
+                    </button>
+                    <button class="relative z-10 flex-1 h-8 flex items-center justify-center text-slate-600 dark:text-slate-300" data-theme="system" aria-label="System theme">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </button>
+                    <button class="relative z-10 flex-1 h-8 flex items-center justify-center text-slate-800 dark:text-slate-200" data-theme="dark" aria-label="Dark theme">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main class="text-center mb-16">
+            <h1 class="text-4xl font-bold text-slate-800 dark:text-white mb-4">My DailyUI v2.0.0</h1>
+            <p class="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">My journey in becoming a better
+                designer in 100 days (or more) - little by little, step by step...</p>
+        </main>
+
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-8">Latest Challenge</h2>
+            <div id="showcase" class="mb-16">
+                <!-- Showcase card will be rendered here -->
+            </div>
+
+            <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-8">All Challenges</h2>
+            <div id="number-board" class="mb-8">
+                <!-- Number board will be rendered here -->
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="challenge-modal"
+            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden transition-opacity duration-200 z-[100]">
+            <div id="modal-content" class="relative">
+                <!-- Modal content will be rendered here -->
+            </div>
+        </div>
+
+        <footer class="text-center text-slate-600">
+            <p>Share your design on Dribbble or Twitter with #DailyUI</p>
+            <p class="mt-4">Copyright 2025 Martin Ferrero-Thompson@Design Code Mastery. v2.0.0</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
